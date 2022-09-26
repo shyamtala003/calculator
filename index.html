@@ -11,37 +11,36 @@
     
     <div class="container">
         <div id="equation"></div>
-
         <div id="result">0</div>
 
         <table>
             <tr>
-                <td class="sign"><button class="btn" value="">Ac</button></td>
-                <td class="sign"><button class="btn" value="/"><ion-icon name="backspace-outline"></ion-icon></button></td>
-                <td class="sign"><button class="btn" value="*">/</button></td>
-                <td class="sign"><button class="btn" value="-">*</button></td>
+                <td class="sign"><button class="btn" onclick="reset()">Ac</button></td>
+                <td class="sign"><button class="btn" onclick="removeLastNumber()"><ion-icon name="backspace-outline"></ion-icon></button></td>
+                <td class="sign"><button class="btn" value="/" onclick="getInput(this)">/</button></td>
+                <td class="sign"><button class="btn" value="*" onclick="getInput(this)">*</button></td>
             </tr>
             <tr>
-                <td><button class="btn" value="7">7</button></td>
-                <td><button class="btn" value="8">8</button></td>
-                <td><button class="btn" value="9">9</button></td>
-                <td rowspan="2" class="sign"><button class="btn" value="+">+</button></td>
+                <td><button class="btn" value="7" onclick="getInput(this)">7</button></td>
+                <td><button class="btn" value="8" onclick="getInput(this)">8</button></td>
+                <td><button class="btn" value="9" onclick="getInput(this)">9</button></td>
+                <td rowspan="2" class="sign"><button class="btn" value="+" onclick="getInput(this)">+</button></td>
             </tr>
             <tr>
-                <td><button class="btn" value="4">4</button></td>
-                <td><button class="btn" value="5">5</button></td>
-                <td><button class="btn" value="6">6</button></td>
+                <td><button class="btn" value="4" onclick="getInput(this)">4</button></td>
+                <td><button class="btn" value="5" onclick="getInput(this)">5</button></td>
+                <td><button class="btn" value="6" onclick="getInput(this)">6</button></td>
             </tr>
             <tr>
-                <td><button class="btn" value="1">1</button></td>
-                <td><button class="btn" value="2">2</button></td>
-                <td><button class="btn" value="3">3</button></td>
-                <td rowspan="2" class="sign"><button class="btn" value="=">=</button></td>
+                <td><button class="btn" value="1" onclick="getInput(this)">1</button></td>
+                <td><button class="btn" value="2" onclick="getInput(this)">2</button></td>
+                <td><button class="btn" value="3" onclick="getInput(this)">3</button></td>
+                <td rowspan="2" class="sign"><button class="btn" value="=" onclick="evalute()">=</button></td>
             </tr>
             <tr>
-                <td><button class="btn sign" value="%">%</button></td>
-                <td><button class="btn" value="0">0</button></td>
-                <td><button class="btn" value=".">.</button></td>
+                <td><button class="btn sign" value="%" onclick="getInput(this)">%</button></td>
+                <td><button class="btn" value="0" onclick="getInput(this)">0</button></td>
+                <td><button class="btn" value="." onclick="getInput(this)">.</button></td>
             </tr>
         </table>
     </div>

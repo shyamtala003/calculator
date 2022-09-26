@@ -33,9 +33,11 @@ body {
 }
 
 #equation {
+    margin-top: 20px;
     padding-inline: 20px;
     text-align: right;
     width: 100%;
+    min-height: 28.8px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -112,5 +114,10 @@ td {
         min-height: 100vh;
         display: flex;
         flex-direction:column;
+    }
+
+    #equation
+    {
+        margin-top: 70px;
     }
 }
