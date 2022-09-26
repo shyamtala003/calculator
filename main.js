@@ -38,12 +38,12 @@ let themeToggler = (el) => {
         document.body.classList.remove("light");
         document.body.classList.add("dark");
         let ionIcon =el.firstElementChild;
-        ionIcon.setAttribute("name","moon-outline");
+        ionIcon.setAttribute("name","sunny-outline");
     }else
     {
         document.body.classList.remove("dark");
         document.body.classList.add("light");
         let ionIcon =el.firstElementChild;
-        ionIcon.setAttribute("name","sunny-outline");
+        ionIcon.setAttribute("name","moon-outline");
     }
 }
