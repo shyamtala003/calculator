@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div id="equation"></div>
+
+        <div id="result">0</div>
+
+        <table>
+            <tr>
+                <td class="sign"><button class="btn" value="">Ac</button></td>
+                <td class="sign"><button class="btn" value="/"><ion-icon name="backspace-outline"></ion-icon></button></td>
+                <td class="sign"><button class="btn" value="*">/</button></td>
+                <td class="sign"><button class="btn" value="-">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" value="7">7</button></td>
+                <td><button class="btn" value="8">8</button></td>
+                <td><button class="btn" value="9">9</button></td>
+                <td rowspan="2" class="sign"><button class="btn" value="+">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" value="4">4</button></td>
+                <td><button class="btn" value="5">5</button></td>
+                <td><button class="btn" value="6">6</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" value="1">1</button></td>
+                <td><button class="btn" value="2">2</button></td>
+                <td><button class="btn" value="3">3</button></td>
+                <td rowspan="2" class="sign"><button class="btn" value="=">=</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn sign" value="%">%</button></td>
+                <td><button class="btn" value="0">0</button></td>
+                <td><button class="btn" value=".">.</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
