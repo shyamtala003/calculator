@@ -5,10 +5,35 @@
     border: none;
 }
 
+button
+{
+    cursor: pointer;
+}
+
+.light
+{
+    --text-color:#000;
+    --body-bg:#6ea0f6;
+    --container-bg:rgba(166, 193, 241, 0.301);
+    --btn-hover:rgba(0, 0, 0, 0.125);
+    --btn-dark:rgba(255, 255, 255, 0.5);
+    --btn-dark-hover:rgba(0, 0, 0, 0.125);
+}
+
+.dark
+{
+    --text-color:#fff;
+    --body-bg:#111927;
+    --container-bg:rgba(17, 25, 40, 0.75);
+    --btn-hover:rgba(255, 255, 255, 0.125);
+    --btn-dark:rgba(0, 0, 0, .5);
+    --btn-dark-hover:rgba(255, 255, 255, 0.125);
+}
+
 body {
     font-family: sans-serif;
     min-height: 100vh;
-    background-color: #111927;
+    background-color: var(--body-bg);
     background-image:
         radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%),
         radial-gradient(at 82% 65%, hsl(219.31, 66%, 43%) 0, transparent 55%);
@@ -16,20 +41,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .5s;
 }
 
 .container {
+    position: relative;
     max-width: 450px;
     width: 100%;
     min-height: 80vh;
     display: flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
+    background-color: var(--container-bg);
     border: 4px solid rgba(255, 255, 255, 0.125);
+}
+
+#theme__toggler
+{
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    background: var(--container-bg);
+    color: var(--text-color);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius:50% ;
 }
 
 #equation {
@@ -41,7 +82,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
-    color: #fff;
+    color: var(--text-color);
     font-size: 25px;
     letter-spacing: 2px;
 }
@@ -50,18 +91,17 @@ body {
     padding-inline: 20px;
     text-align: right;
     width: 100%;
-    color: #fff;
+    color: var(--text-color);
     font-size: 30px;
     outline: none;
 }
 
-table
-{
+table {
     width: 100%;
 }
 
 td {
-    border: 2px solid rgba(17, 25, 40, 0.75);
+    border: 2px solid var(--container-bg);
 }
 
 .btn {
@@ -71,39 +111,29 @@ td {
     display: block;
     margin: 0px auto;
     text-align: center;
-    color: #fff;
+    color: var(--text-color);
     padding: 20px 30px;
     background: transparent;
 }
 
-.btn:hover
-{
-    background: rgba(255, 255, 255, 0.125);
+.btn:hover {
+    background: var(--btn-hover);
 }
 
-.backspace
-{
-    background: rgba(17, 25, 40, 0.75);
+.sign {
+    background: var(--btn-dark);
 }
 
-.sign
-{
-    background: rgba(0,0,0,.5);
+.sign:hover {
+    background: var(--btn-dark-hover);
 }
 
-.sign:hover
-{
-    background: rgba(255, 255, 255, 0.125);
-}
-
-@media screen and (max-width:380px){
-    td
-    {
-        width:85px;
+@media screen and (max-width:380px) {
+    td {
+        width: 85px;
     }
 
-    .btn
-    {
+    .btn {
         padding: 30px;
         font-size: 20px;
     }
@@ -113,11 +143,10 @@ td {
         width: 100%;
         min-height: 100vh;
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
     }
 
-    #equation
-    {
+    #equation {
         margin-top: 70px;
     }
 }

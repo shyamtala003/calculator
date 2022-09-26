@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,24 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    
+
+<body class="light">
+
     <div class="container">
+        <button id="theme__toggler" onclick="themeToggler(this)">
+            <ion-icon name="sunny-outline"></ion-icon>
+        </button>
+
+
         <div id="equation"></div>
         <div id="result">0</div>
 
         <table>
             <tr>
                 <td class="sign"><button class="btn" onclick="reset()">Ac</button></td>
-                <td class="sign"><button class="btn" onclick="removeLastNumber()"><ion-icon name="backspace-outline"></ion-icon></button></td>
+                <td class="sign"><button class="btn" onclick="removeLastNumber()">
+                        <ion-icon name="backspace-outline"></ion-icon>
+                    </button></td>
                 <td class="sign"><button class="btn" value="/" onclick="getInput(this)">/</button></td>
                 <td class="sign"><button class="btn" value="*" onclick="getInput(this)">*</button></td>
             </tr>
@@ -43,9 +52,11 @@
                 <td><button class="btn" value="." onclick="getInput(this)">.</button></td>
             </tr>
         </table>
+
     </div>
 
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>
